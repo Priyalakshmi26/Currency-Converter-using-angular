@@ -1,0 +1,57 @@
+<!--<div class="container" *ngIf="rates">
+  <br> <br>
+  <div class ="center">
+  <h1>Currency Converter</h1>
+
+  <input type="number" placeholder="Enter amount" [(ngModel)]="amount">
+
+  <label>From: </label>
+  <select [(ngModel)]="from" (change)="loadRates()">
+    <option *ngFor="let c of getAllCurrencies()" [value]="c">{{c}}</option>
+    
+  </select>
+
+  <label>To: </label>
+  <select [(ngModel)]="to">
+    <option *ngFor="let c of getAllCurrencies()" [value]="c">{{c}}</option>
+
+  </select>
+
+  <br>
+
+ <b [style.color]="amount < 0 ? 'red': ''">{{amount.toFixed(2)}} {{from}} = {{convert().toFixed(2)}} {{to}}</b>
+  
+ </div>
+</div>-->
+<br> <br> <br>
+<div class="center">
+<div class="wrapper">
+  <header>Currency Converter</header>
+  <form action="#">
+      <div class="amount">
+          <p>Enter the Amount</p>
+          <input type="text" placeholder="Enter Amount" required>
+      </div>
+      <div class="drop-list">
+          <div class="from">
+              <p>From:</p>
+              <div class="select-box">
+                  <img src="https://flagcdn.com/h20/us.png" alt="flag">
+                  <select></select>
+              </div>
+          </div>
+          <div class="icon"><i class="fas fa-exchange-alt"></i></div>
+          <div class="to">
+              <p>To:</p>
+              <div class="select-box">
+                  <img src="https://flagcdn.com/h20/np.png" alt="flag">
+                  <select></select>
+              </div>
+          </div>
+      </div>
+      <div class="exchange-rate">Getting Exchange Rate...</div>
+      <button (click)="callfun()">Get Exchange Rate</button>
+  </form>
+
+</div>
+</div>
